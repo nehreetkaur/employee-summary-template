@@ -41,7 +41,7 @@ const managerQuestion = [
     },
     {
         type: "input",
-        name: "managerOfficenum",
+        name: "officeNumber",
         message: "What is manager's office number"
 
     }
@@ -51,7 +51,7 @@ const managerQuestion = [
 function managerInfo() {
     console.log("Let's build our team");
     inquirer.prompt(managerQuestion).then(function (data) {
-        const manager = new Manager(data.managerName, data.managerId, data.managerEmail, data.managerOfficenum);
+        const manager = new Manager(data.managerName, data.managerId, data.managerEmail, data.officeNumber);
         createTeam.push(manager);
         teamMember();
 
@@ -111,7 +111,7 @@ function createEngineer() {
 
             type: "input",
             name: " engineerGithub",
-            message: "What is engineer's github",
+            message: "What is engineer's github username",
 
         }
     ]).then(function (data) {
@@ -169,14 +169,23 @@ function createIntern() {
 
 function makeTeam() {
     const finalTeam = render(createTeam);
+    console.log(finalTeam);
 
-    try {
-        fs.writeFile(outputPath, finalTeam);
-    }
-    catch (error) {
-        //console.log("oopss");
-        console.log(error.message);
-    }
+    fs.writeFile(outputPath, finalTeam, "utf8", (err) => {
+        if (err) throw err;
+        console.log('The file has been saved!');
+    });
+
+
+
+
+    // try {
+    //      fs.writeFile(outputPath, finalTeam);
+    //  }
+    //  catch (error) {
+    // //     //console.log("oopss");
+    //      console.log(error.message);
+    //  }
 }
 managerInfo();
 
