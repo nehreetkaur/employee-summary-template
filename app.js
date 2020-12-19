@@ -191,13 +191,6 @@ function makeTeam() {
 
 
 
-    // try {
-    //      fs.writeFile(outputPath, finalTeam);
-    //  }
-    //  catch (error) {
-    // //     //console.log("oopss");
-    //      console.log(error.message);
-    //  }
 }
 managerInfo();
 
