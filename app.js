@@ -12,6 +12,7 @@ const render = require("./lib/htmlRenderer");
 
 
 const createTeam = [];
+const empId=[]
 
 
 
@@ -21,9 +22,17 @@ const managerQuestion = [
         type: "input",
         name: "managerName",
         message: "What is the manager's name",
-
-
+        validate: function (input) {
+         if(!input ) {
+           console.log("Invalid input ");
+           return false;
+         }
+         return true;
+       }
     },
+
+
+    
 
     {
         type: "input",
@@ -53,6 +62,7 @@ function managerInfo() {
     inquirer.prompt(managerQuestion).then(function (data) {
         const manager = new Manager(data.managerName, data.managerId, data.managerEmail, data.officeNumber);
         createTeam.push(manager);
+        empId.push(data.managerId);
         teamMember();
 
     });
@@ -91,7 +101,7 @@ function createEngineer() {
 
         {
             type: "input",
-            name: "engineerName",
+            name:  "engineerName",
             message: "What is engineer's name",
         },
 
@@ -103,20 +113,21 @@ function createEngineer() {
 
         {
             type: "input",
-            name: " engineerEmail",
+            name: "engineerEmail",
             message: "What is engineer's email",
         },
 
         {
 
             type: "input",
-            name: " engineerGithub",
+            name: "engineerGithub",
             message: "What is engineer's github username",
 
         }
     ]).then(function (data) {
         const engineer = new Engineer(data.engineerName, data.engineerId, data.engineerEmail, data.engineerGithub);
         createTeam.push(engineer);
+        empId.push(data.engineerId);
         teamMember();
     });
 };
@@ -161,6 +172,7 @@ function createIntern() {
     ]).then(function (data) {
         const intern = new Intern(data.internName, data.internId, data.internEmail, data.internSchool);
         createTeam.push(intern);
+        empId.push(data.internId);
         teamMember();
 
     });
