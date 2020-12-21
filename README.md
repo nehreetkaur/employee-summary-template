@@ -9,7 +9,7 @@ as well.
 
 [LANGUAGE](#Language)
 
-[RESOURCES-REFFERED](#ResourcessReffered)
+[RESOURCES-REFFERED](#Resources-Reffered)
 
 [SCREENSHOT](#Screen-shot)
 
@@ -46,7 +46,7 @@ and answers    **DYNAMICALLY** **HTML**  file is created.
 
 **BOOTSTRAP**
 
-## **Resourcess-Reffered**
+## **Resources-Reffered**
 
 [INQUIRER-DOCUMENTATION](https://www.npmjs.com/package/inquirer)
 
