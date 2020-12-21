@@ -54,15 +54,15 @@ and answers    **DYNAMICALLY** **HTML**  file is created.
 
 ## **Screen-shot**
 
- ![Screen-shot-one](images\test.png)
+ ![Screen-shot-one](images/test.png)
 
  ## **Terminal-Screenshot**
 
-![Screen-shot-two](images\2.png)
+![Screen-shot-two](images/2.png)
 
  ## **Generated-Team-Screenshot**
 
- ![Screen-shot-three](images\3.png)
+ ![Screen-shot-three](images/3.png)
 
  ## **GITHUB-REPOSITORY**
  [GITHUB-REPOSITORY-LINK](https://github.com/nehreetkaur/employee-summary-template)
