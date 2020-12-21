@@ -12,7 +12,7 @@ const render = require("./lib/htmlRenderer");
 
 
 const createTeam = [];
-const empId=[]
+const empId = []
 
 
 
@@ -23,21 +23,28 @@ const managerQuestion = [
         name: "managerName",
         message: "What is the manager's name",
         validate: function (input) {
-         if(!input ) {
-           console.log("Invalid input ");
-           return false;
-         }
-         return true;
-       }
+            if (!input) {
+                console.log("Invalid input ");
+                return false;
+            }
+            return true;
+        }
     },
 
 
-    
+
 
     {
         type: "input",
         name: "managerId",
         message: "What is manager's ID",
+        validate: function (input) {
+            if (isNaN(input)) {
+                console.log("Invalid input ");
+                return false;
+            }
+            return true;
+        }
     },
 
     {
@@ -101,14 +108,34 @@ function createEngineer() {
 
         {
             type: "input",
-            name:  "engineerName",
+            name: "engineerName",
             message: "What is engineer's name",
+            validate: function (input) {
+                if (!input) {
+                    console.log("Invalid input ");
+                    return false;
+                }
+                return true;
+            }
+
         },
 
         {
             type: "input",
             name: "engineerId",
-            message: "What is engineer's ID"
+            message: "What is engineer's ID",
+            validate: function (input) {
+                if (isNaN(input)) {
+                    console.log("Invalid input ");
+                    return false;
+                }
+                return true;
+            }
+
+
+
+
+
         },
 
         {
@@ -144,6 +171,13 @@ function createIntern() {
             type: "input",
             name: "internName",
             message: "What is the intern's name",
+            validate: function (input) {
+                if (!input) {
+                    console.log("Invalid input ");
+                    return false;
+                }
+                return true;
+            }
 
 
         },
@@ -152,6 +186,13 @@ function createIntern() {
             type: "input",
             name: "internId",
             message: "What is intern's ID",
+            validate: function (input) {
+                if (isNaN(input)) {
+                    console.log("Invalid input ");
+                    return false;
+                }
+                return true;
+            }
         },
 
         {
