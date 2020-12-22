@@ -34,6 +34,8 @@ is shown  and all teams are color co-ordinated as well.
 **CLASSES** are also created as well.After prompt , question 
 and answers    **DYNAMICALLY** **HTML**  file is created.
 
+ALL, **tests** **PASS** by running **npm run test** on terminal.
+
 
 ## Text-Editor
 
